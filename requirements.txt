@@ -1,0 +1,5 @@
+cryptography
+streamlit
+fastapi
+uvicorn
+liboqs-python

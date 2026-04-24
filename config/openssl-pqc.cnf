@@ -1,0 +1,18 @@
+# OpenSSL configuration for PQC Trinity Gateway
+# Loads oqs-provider for X25519MLKEM768 group support
+
+openssl_conf = openssl_init
+
+[openssl_init]
+providers = provider_sect
+
+[provider_sect]
+default = default_sect
+oqsprovider = oqsprovider_sect
+
+[default_sect]
+activate = 1
+
+[oqsprovider_sect]
+activate = 1
+module = /usr/local/ossl-pqc/lib64/ossl-modules/oqsprovider.so
